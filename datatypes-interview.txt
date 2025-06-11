@@ -1,0 +1,13 @@
+Types: on the basis of storing and accessing data from the memory
+1. Primitive
+    7 types: String, Number, Boolean, null, undefined, Symbol-to make any value unique, 
+    BigInt-scientific or big value
+2. Non Primitive (Reference Type) - direct allocation in memory
+    Arrays, Objects, Functions
+
+Question- Is Js Dynamically type lang or Statistically typed lang?
+Ans- JavaScript is a dynamically typed language.
+     You don’t need to declare variable types in JavaScript — the type is decided at runtime, not in advance.
+    example: let x = 5;      // x is a number  
+             x = "hello";    // now x is a string
+

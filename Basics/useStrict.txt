@@ -1,0 +1,38 @@
+Question: What is "use strict"?
+Answer: 
+It’s a string literal that tells the JavaScript engine to run the code in Strict Mode, which:
+1. Prevents the use of undeclared variables
+2. Throws more errors to help you catch bugs
+3. Disallows some problematic or outdated syntax
+
+Question:  Why Use It?
+Answer:
+
+*Without Strict Mode*	                                                            *With Strict Mode*
+Silent errors might go unnoticed	                                        Errors are thrown for better debugging
+Variables can be accidentally global	                                    Forces variable declaration with let/const/var
+Allows duplicate parameter names	                                        Disallowed in strict mode
+
+Question : Where to Place It?
+Answer: At the top of your JS file or function:
+
+Example:
+
+1. "use strict";
+function myFunc() {
+  // strict mode applies here
+}
+
+2. function example() {
+  "use strict";
+  // Code inside this function runs in strict mode
+}
+
+Question:  When NOT to use "use strict"?
+Answer: 
+When using very old JavaScript code or libraries that don’t follow strict rules (rare case).
+In inline scripts where strict mode could break existing behavior (but again, not recommended).
+
+Example: 
+"use strict";
+x = 5;  // ReferenceError: x is not defined
