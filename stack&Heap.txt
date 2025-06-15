@@ -1,0 +1,27 @@
+Stack contains primitive data types.
+whenever the stack memory will be used it means it has created a copy of variable in it. 
+
+example : 
+        let a = 10;
+        let b = a;
+        b = "40";
+
+    console.log(a) // 10
+    console.log(b) // 40
+
+
+Heap contains non primitive data types.
+and anything is being saved in heap memory it gets a refrence to the original value so any kind of update and change will 
+affect the original value as well. 
+
+example: 
+        let userOne{
+            email: "user@google.com",
+            class: "10"
+        }
+
+        let userTwo = userOne;
+        userTwo.email = "tanushka@gmail.com"
+
+        console.log(userOne.email) // tanushka@gmail.com
+        console.log(userTwo.email) // tanushka@gmail.com 
