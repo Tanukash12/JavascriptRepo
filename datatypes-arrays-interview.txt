@@ -1,0 +1,52 @@
+Types: on the basis of storing and accessing data from the memory
+1. Primitive
+    7 types: String, Number, Boolean, null, undefined, Symbol-to make any value unique, 
+    BigInt-scientific or big value
+2. Non Primitive (Reference Type) - direct allocation in memory
+    Arrays, Objects, Functions
+
+Question- Is Js Dynamically type lang or Statistically typed lang?
+Ans- JavaScript is a dynamically typed language.
+     You don’t need to declare variable types in JavaScript — the type is decided at runtime, not in advance.
+    example: let x = 5;      // x is a number  
+             x = "hello";    // now x is a string
+
+
+ARRAYS
+const arr = [1,3,3,4]
+arrays in js are resizable 
+0 based indexing
+IMPORTANT => they made shallow copy of an object -> copy whose properties share the same refrences as those of the source object 
+             from which the copy was made. 
+             example: const original = {
+                        name: "Tanushka",
+                        hobbies: ["coding", "dancing"]
+                        };
+
+                        // Shallow copy using spread operator
+                        const copy = { ...original };
+
+                        // Change in copied object
+                        copy.name = "Kashyap";
+                        copy.hobbies.push("reading");
+
+                        console.log("Original:", original);
+                        console.log("Copy:", copy);
+
+             output: Original: { name: 'Tanushka', hobbies: [ 'coding', 'dancing', 'reading' ] }
+                     Copy:     { name: 'Kashyap', hobbies: [ 'coding', 'dancing', 'reading' ] }
+        
+            📌 Explanation in 3 lines:
+            1. name is a primitive, so it's copied separately 
+            2. hobbies is an array (reference type), so both original and copy share the same array 
+            3. That’s why adding "reading" in copy’s hobbies also reflects in original 
+
+inspect k baad array definition will contain prototype and expanding it will contain further prototype and then no more!
+Deep Copy
+
+                        slice():                                                splice():
+Purpose =>	        Returns a shallow copy of a portion of an array         Modifies the array by removing/replacing/adding elements
+Original Array => 	❌ Does not modify original array                      ✅ Modifies the original array
+Return Value => 	Returns the selected elements as a new array            Returns the removed elements (if any)
+Usage Syntax => 	array.slice(start, end)                                 array.splice(start, deleteCount, item1, ...)
+Use Case =>         To copy or extract elements                             To add/remove/replace elements
